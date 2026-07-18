@@ -2965,3 +2965,46 @@ ul {
 
 
 }
+
+/* =====================================
+   CORREÇÃO MENU MOBILE
+===================================== */
+
+@media(max-width:900px){
+
+
+    .navbar{
+
+        padding:0 20px;
+
+    }
+
+
+    .nav-links{
+
+        display:none;
+
+    }
+
+
+    .logo{
+
+        font-size:20px;
+
+        white-space:nowrap;
+
+    }
+
+
+    .menu-toggle{
+
+        display:block;
+
+        font-size:28px;
+
+        cursor:pointer;
+
+    }
+
+
+}
