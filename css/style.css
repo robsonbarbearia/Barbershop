@@ -2156,3 +2156,197 @@ ul {
 }
 
 }
+/* =====================================
+   HERO PREMIUM UPGRADE
+===================================== */
+
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    radial-gradient(
+
+        circle at center,
+
+        rgba(201,162,77,.12),
+
+        transparent 45%
+
+    );
+
+    z-index:1;
+
+    pointer-events:none;
+
+}
+
+
+
+
+
+
+
+.hero-content{
+
+    animation:heroEnter 1.5s ease forwards;
+
+}
+
+
+
+
+
+@keyframes heroEnter{
+
+
+    from{
+
+
+        opacity:0;
+
+
+        transform:translateY(50px);
+
+
+    }
+
+
+
+    to{
+
+
+        opacity:1;
+
+
+        transform:translateY(0);
+
+
+    }
+
+
+}
+
+
+
+
+
+
+
+.hero h1{
+
+
+    text-shadow:
+
+    0 0 30px rgba(201,162,77,.15);
+
+
+
+}
+
+
+
+
+
+
+
+.hero-button{
+
+
+    position:relative;
+
+
+    overflow:hidden;
+
+
+}
+
+
+
+
+
+.hero-button::before{
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    top:0;
+
+
+    left:-120%;
+
+
+    width:80%;
+
+
+    height:100%;
+
+
+    background:
+
+    linear-gradient(
+
+        120deg,
+
+        transparent,
+
+        rgba(255,255,255,.35),
+
+        transparent
+
+    );
+
+
+    transition:.8s;
+
+
+}
+
+
+
+
+
+.hero-button:hover::before{
+
+
+    left:120%;
+
+
+}
+
+
+
+
+
+
+
+.logo{
+
+
+    transition:.4s;
+
+
+}
+
+
+
+.logo:hover{
+
+
+    color:var(--gold);
+
+
+    transform:translateY(-3px);
+
+
+}
