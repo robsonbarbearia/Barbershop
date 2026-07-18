@@ -2844,3 +2844,124 @@ ul {
 }
 
 }
+/* =====================================
+   WHATSAPP FLUTUANTE
+===================================== */
+
+
+.whatsapp-float {
+
+
+    position:fixed;
+
+
+    right:25px;
+
+
+    bottom:25px;
+
+
+    width:170px;
+
+
+    height:55px;
+
+
+    background:#25D366;
+
+
+    color:white;
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    justify-content:center;
+
+
+    text-decoration:none;
+
+
+    border-radius:50px;
+
+
+    font-weight:bold;
+
+
+    z-index:9999;
+
+
+    box-shadow:
+
+    0 10px 30px rgba(0,0,0,.4);
+
+
+    transition:.3s;
+
+
+}
+
+
+
+.whatsapp-float:hover{
+
+
+    transform:translateY(-5px);
+
+
+}
+
+
+
+
+.whatsapp-float::before{
+
+
+    content:"";
+
+
+    width:14px;
+
+
+    height:14px;
+
+
+    background:white;
+
+
+    border-radius:50%;
+
+
+    margin-right:10px;
+
+
+}
+
+
+
+
+@media(max-width:600px){
+
+
+    .whatsapp-float{
+
+
+        width:150px;
+
+
+        height:50px;
+
+
+        right:15px;
+
+
+        bottom:15px;
+
+
+    }
+
+
+}
