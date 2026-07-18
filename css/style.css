@@ -2350,3 +2350,288 @@ ul {
 
 
 }
+
+/* =====================================
+   GALERIA PREMIUM
+===================================== */
+
+
+.gallery-grid-premium {
+
+
+    display:grid;
+
+
+    grid-template-columns:2fr 1fr 1fr;
+
+
+    grid-template-rows:320px 320px;
+
+
+    gap:25px;
+
+
+}
+
+
+
+
+
+.gallery-card {
+
+
+    position:relative;
+
+
+    overflow:hidden;
+
+
+    background:#111;
+
+
+    border:1px solid rgba(201,162,77,.15);
+
+
+}
+
+
+
+
+
+.gallery-card img {
+
+
+    width:100%;
+
+
+    height:100%;
+
+
+    object-fit:cover;
+
+
+    transition:1s ease;
+
+
+}
+
+
+
+
+
+
+.gallery-card:hover img {
+
+
+    transform:scale(1.08);
+
+
+}
+
+
+
+
+
+
+.featured-photo {
+
+
+    grid-row:span 2;
+
+
+}
+
+
+
+
+
+
+.gallery-overlay {
+
+
+    position:absolute;
+
+
+    bottom:0;
+
+
+    left:0;
+
+
+    width:100%;
+
+
+    padding:30px;
+
+
+    background:
+
+    linear-gradient(
+
+        transparent,
+
+        rgba(0,0,0,.9)
+
+    );
+
+
+    transform:translateY(20px);
+
+
+    opacity:0;
+
+
+    transition:.5s;
+
+
+}
+
+
+
+
+
+.gallery-card:hover .gallery-overlay {
+
+
+    transform:translateY(0);
+
+
+    opacity:1;
+
+
+}
+
+
+
+
+
+
+.gallery-overlay h3 {
+
+
+    font-family:'Cinzel',serif;
+
+
+    font-size:25px;
+
+
+    color:white;
+
+
+}
+
+
+
+
+
+.gallery-overlay p {
+
+
+    color:#ccc;
+
+
+    margin-top:10px;
+
+
+}
+
+
+
+
+
+
+
+
+/* FOTO DA FACHADA FUTURA */
+
+
+.empty-photo {
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    justify-content:center;
+
+
+    text-align:center;
+
+
+    border:1px dashed var(--gold);
+
+
+}
+
+
+
+
+
+.empty-photo span {
+
+
+    color:var(--gold);
+
+
+    letter-spacing:3px;
+
+
+    font-size:14px;
+
+
+}
+
+
+
+
+
+.empty-photo p {
+
+
+    color:#777;
+
+
+    margin-top:10px;
+
+
+}
+
+
+
+
+
+
+
+/* CELULAR */
+
+
+@media(max-width:900px){
+
+
+    .gallery-grid-premium{
+
+
+        display:flex;
+
+
+        flex-direction:column;
+
+
+    }
+
+
+
+    .gallery-card,
+    .featured-photo{
+
+
+        height:350px;
+
+
+    }
+
+
+
+}
