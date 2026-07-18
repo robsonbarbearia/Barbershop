@@ -354,12 +354,15 @@ ul {
 
 }
 
+@media(max-width:900px){
 
+    .menu-mobile{
 
+        display:flex;
 
+    }
 
-
-
+}
 
 
 
