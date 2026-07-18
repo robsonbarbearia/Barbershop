@@ -1,0 +1,1816 @@
+/* =====================================================
+   ROBSON BARBEAR
+   PREMIUM BARBERSHOP WEBSITE
+   STYLE.CSS - PARTE 1/3
+===================================================== */
+
+
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    background: #080808;
+    color: #ffffff;
+
+    font-family: 'Poppins', sans-serif;
+
+    overflow-x: hidden;
+
+}
+
+
+
+img {
+
+    max-width: 100%;
+    display: block;
+
+}
+
+
+
+a {
+
+    text-decoration: none;
+    color: inherit;
+
+}
+
+
+
+ul {
+
+    list-style: none;
+
+}
+
+
+
+
+/* VARIÁVEIS */
+
+:root {
+
+    --black: #080808;
+    --dark: #111111;
+
+    --gold: #c9a24d;
+
+    --white: #ffffff;
+
+    --gray: #a0a0a0;
+
+    --transition: .4s ease;
+
+}
+
+
+
+
+
+/* CONTAINER */
+
+
+.container {
+
+    width: min(1200px, 90%);
+
+    margin: auto;
+
+}
+
+
+
+
+
+
+
+/* LOADER */
+
+
+.loader {
+
+    position: fixed;
+
+    inset: 0;
+
+    background: #080808;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    z-index: 9999;
+
+}
+
+
+
+.loader-logo {
+
+
+    font-family: 'Cinzel', serif;
+
+    font-size: 40px;
+
+    text-align: center;
+
+    letter-spacing: 8px;
+
+    color: var(--gold);
+
+
+    animation: pulseLoader 2s infinite;
+
+
+}
+
+
+
+@keyframes pulseLoader {
+
+
+    0%,100% {
+
+        opacity: .4;
+
+    }
+
+
+    50% {
+
+        opacity: 1;
+
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+/* HEADER */
+
+
+.header {
+
+
+    position: fixed;
+
+    top:0;
+
+    width:100%;
+
+    z-index:1000;
+
+
+}
+
+
+
+.navbar {
+
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:auto;
+
+
+    height:90px;
+
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+
+}
+
+
+
+
+
+.logo {
+
+
+    font-family:'Cinzel',serif;
+
+    font-size:22px;
+
+    line-height:.9;
+
+    letter-spacing:3px;
+
+
+}
+
+
+
+.logo span {
+
+
+    color:var(--gold);
+
+}
+
+
+
+
+.nav-links {
+
+
+    display:flex;
+
+    gap:35px;
+
+
+}
+
+
+
+.nav-links a {
+
+
+    font-size:14px;
+
+    text-transform:uppercase;
+
+    letter-spacing:2px;
+
+
+    transition:var(--transition);
+
+
+}
+
+
+
+.nav-links a:hover {
+
+
+    color:var(--gold);
+
+
+}
+
+
+
+
+
+
+
+.btn-whatsapp {
+
+
+    background:#25D366;
+
+    color:white;
+
+
+    padding:13px 30px;
+
+
+    border-radius:50px;
+
+
+    font-weight:600;
+
+
+    transition:.3s;
+
+
+}
+
+
+
+.btn-whatsapp:hover {
+
+
+    transform:translateY(-3px);
+
+
+    box-shadow:0 10px 30px rgba(37,211,102,.3);
+
+
+}
+
+
+
+
+
+
+
+
+
+/* MENU MOBILE */
+
+
+.menu-mobile {
+
+
+    display:none;
+
+    flex-direction:column;
+
+    gap:6px;
+
+
+}
+
+
+
+.menu-mobile span {
+
+
+    width:30px;
+
+    height:2px;
+
+    background:white;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+/* HERO */
+
+
+.hero {
+
+
+    height:100vh;
+
+    min-height:700px;
+
+
+    position:relative;
+
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+
+    text-align:center;
+
+
+    background-image:
+
+    linear-gradient(
+        rgba(0,0,0,.65),
+        rgba(0,0,0,.8)
+    ),
+
+    url("COLOQUE_AQUI_A_FOTO_DA_FACHADA");
+
+
+
+    background-size:cover;
+
+    background-position:center;
+
+
+
+}
+
+
+
+
+
+.hero-overlay {
+
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    radial-gradient(
+
+        circle,
+
+        transparent 20%,
+
+        rgba(0,0,0,.8)
+
+    );
+
+
+}
+
+
+
+
+
+
+
+.hero-content {
+
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:900px;
+
+
+}
+
+
+
+.hero-small {
+
+
+    color:var(--gold);
+
+    letter-spacing:5px;
+
+    font-size:14px;
+
+    margin-bottom:30px;
+
+
+}
+
+
+
+.hero h1 {
+
+
+    font-family:'Cinzel',serif;
+
+
+    font-size:clamp(60px,10vw,120px);
+
+
+    line-height:.85;
+
+
+    letter-spacing:10px;
+
+
+
+}
+
+
+
+.hero-description {
+
+
+    margin:40px auto;
+
+    max-width:500px;
+
+
+    color:#ddd;
+
+
+    font-size:18px;
+
+
+}
+
+
+
+
+.hero-button {
+
+
+    display:inline-block;
+
+
+    padding:18px 45px;
+
+
+    border:1px solid var(--gold);
+
+
+    color:white;
+
+
+    text-transform:uppercase;
+
+
+    letter-spacing:3px;
+
+
+    transition:.4s;
+
+
+}
+
+
+
+.hero-button:hover {
+
+
+    background:var(--gold);
+
+
+    color:black;
+
+
+}
+/* =====================================================
+   STYLE.CSS - PARTE 2/3
+===================================================== */
+
+
+
+/* SCROLL INDICATOR */
+
+
+.scroll-indicator {
+
+
+    position:absolute;
+
+    bottom:40px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+
+}
+
+
+
+.scroll-indicator span {
+
+
+    display:block;
+
+    width:2px;
+
+    height:70px;
+
+
+    background:var(--gold);
+
+
+    animation:scrollDown 2s infinite;
+
+
+}
+
+
+
+@keyframes scrollDown {
+
+
+    0% {
+
+        transform:scaleY(0);
+
+        transform-origin:top;
+
+    }
+
+
+    50% {
+
+        transform:scaleY(1);
+
+    }
+
+
+    100% {
+
+        transform:scaleY(0);
+
+        transform-origin:bottom;
+
+    }
+
+
+}
+
+
+
+
+
+
+
+
+/* TITULOS DAS SEÇÕES */
+
+
+.section-title {
+
+
+    text-align:center;
+
+    margin-bottom:80px;
+
+
+}
+
+
+
+.section-title span {
+
+
+    color:var(--gold);
+
+
+    letter-spacing:5px;
+
+
+    font-size:13px;
+
+
+}
+
+
+
+.section-title h2 {
+
+
+    margin-top:20px;
+
+
+    font-family:'Cinzel',serif;
+
+
+    font-size:clamp(35px,5vw,55px);
+
+
+    line-height:1.2;
+
+
+}
+
+
+
+
+
+
+
+/* SOBRE */
+
+
+.about {
+
+
+    padding:140px 0;
+
+
+    background:#090909;
+
+
+}
+
+
+
+.about-grid {
+
+
+    display:grid;
+
+
+    grid-template-columns:1fr 1fr;
+
+
+    gap:70px;
+
+
+    align-items:center;
+
+
+}
+
+
+
+
+.about-image {
+
+
+    position:relative;
+
+
+}
+
+
+
+.about-image::after {
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    width:100%;
+
+    height:100%;
+
+
+    border:1px solid var(--gold);
+
+
+    top:20px;
+
+    left:20px;
+
+
+    z-index:0;
+
+
+}
+
+
+
+
+.about-image img {
+
+
+    position:relative;
+
+
+    z-index:1;
+
+
+    height:600px;
+
+
+    width:100%;
+
+
+    object-fit:cover;
+
+
+}
+
+
+
+
+
+
+.about-text h3 {
+
+
+    font-family:'Cinzel',serif;
+
+
+    font-size:35px;
+
+
+    margin-bottom:30px;
+
+
+}
+
+
+
+.about-text p {
+
+
+    color:#aaa;
+
+
+    line-height:1.9;
+
+
+    margin-bottom:20px;
+
+
+}
+
+
+
+.about-number {
+
+
+    margin-top:40px;
+
+
+    display:flex;
+
+
+    flex-direction:column;
+
+
+}
+
+
+
+.about-number strong {
+
+
+    font-size:70px;
+
+
+    font-family:'Cinzel',serif;
+
+
+    color:var(--gold);
+
+
+}
+
+
+
+.about-number span {
+
+
+    color:#aaa;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* FRASE */
+
+
+.quote {
+
+
+    padding:150px 20px;
+
+
+    background:#000;
+
+
+    text-align:center;
+
+
+}
+
+
+
+.quote h2 {
+
+
+    font-family:'Cinzel',serif;
+
+
+    font-size:clamp(35px,6vw,75px);
+
+
+    max-width:1000px;
+
+
+    margin:auto;
+
+
+    line-height:1.2;
+
+
+}
+
+
+
+
+
+
+
+
+/* SERVIÇOS */
+
+
+.services {
+
+
+    padding:140px 0;
+
+
+    background:#080808;
+
+
+}
+
+
+
+
+.services-grid {
+
+
+    display:grid;
+
+
+    grid-template-columns:repeat(3,1fr);
+
+
+    gap:30px;
+
+
+}
+
+
+
+
+
+.service-card {
+
+
+    padding:45px 35px;
+
+
+    background:#111;
+
+
+    border:1px solid rgba(255,255,255,.05);
+
+
+    position:relative;
+
+
+    transition:.5s;
+
+
+    overflow:hidden;
+
+
+}
+
+
+
+
+.service-card::before {
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    width:100%;
+
+    height:3px;
+
+
+    background:var(--gold);
+
+
+    top:0;
+
+    left:-100%;
+
+
+    transition:.5s;
+
+
+}
+
+
+
+
+.service-card:hover::before {
+
+
+    left:0;
+
+
+}
+
+
+
+
+.service-card:hover {
+
+
+    transform:translateY(-10px);
+
+
+    border-color:rgba(201,162,77,.4);
+
+
+}
+
+
+
+
+.service-number {
+
+
+    font-size:14px;
+
+
+    color:var(--gold);
+
+
+    letter-spacing:3px;
+
+
+    margin-bottom:30px;
+
+
+}
+
+
+
+
+.service-card h3 {
+
+
+    font-family:'Cinzel',serif;
+
+
+    font-size:28px;
+
+
+    margin-bottom:20px;
+
+
+}
+
+
+
+
+.service-card p {
+
+
+    color:#999;
+
+
+    line-height:1.8;
+
+
+    min-height:90px;
+
+
+}
+
+
+
+
+.service-card strong {
+
+
+    display:block;
+
+
+    margin-top:30px;
+
+
+    font-size:35px;
+
+
+    color:var(--gold);
+
+
+    font-family:'Cinzel',serif;
+
+
+}
+
+
+
+
+.service-card.featured {
+
+
+    transform:translateY(-20px);
+
+
+    border-color:var(--gold);
+
+
+}
+/* =====================================================
+   STYLE.CSS - PARTE 3/3
+===================================================== */
+
+
+/* GALERIA */
+
+
+.gallery {
+
+
+    padding:140px 0;
+
+
+    background:#090909;
+
+
+}
+
+
+
+.gallery-grid {
+
+
+    display:grid;
+
+
+    grid-template-columns:2fr 1fr 1fr;
+
+
+    grid-template-rows:350px 350px;
+
+
+    gap:25px;
+
+
+}
+
+
+
+.gallery-item {
+
+
+    overflow:hidden;
+
+
+    position:relative;
+
+
+    background:#111;
+
+
+}
+
+
+
+.gallery-item img {
+
+
+    width:100%;
+
+
+    height:100%;
+
+
+    object-fit:cover;
+
+
+    transition:1s;
+
+
+}
+
+
+
+
+.gallery-item:hover img {
+
+
+    transform:scale(1.08);
+
+
+}
+
+
+
+
+.gallery-item.large {
+
+
+    grid-row:span 2;
+
+
+}
+
+
+
+
+.empty-photo {
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+
+    align-items:center;
+
+
+    border:1px dashed var(--gold);
+
+
+}
+
+
+
+.empty-photo span {
+
+
+    color:var(--gold);
+
+
+    letter-spacing:3px;
+
+
+    font-size:13px;
+
+
+}
+
+
+
+
+
+
+
+/* EXPERIÊNCIA */
+
+
+.experience {
+
+
+    min-height:600px;
+
+
+    position:relative;
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    text-align:center;
+
+
+    background:
+
+
+    linear-gradient(
+        rgba(0,0,0,.75),
+        rgba(0,0,0,.9)
+    );
+
+
+}
+
+
+
+.experience-content {
+
+
+    position:relative;
+
+
+    z-index:2;
+
+
+    max-width:900px;
+
+
+    margin:auto;
+
+
+}
+
+
+
+.experience-content span {
+
+
+    color:var(--gold);
+
+
+    letter-spacing:5px;
+
+
+}
+
+
+
+.experience-content h2 {
+
+
+    font-family:'Cinzel',serif;
+
+
+    font-size:clamp(35px,6vw,70px);
+
+
+    margin:30px 0;
+
+
+}
+
+
+
+.experience-content p {
+
+
+    color:#bbb;
+
+
+    font-size:18px;
+
+
+}
+
+
+
+
+
+
+
+/* CONTATO */
+
+
+.contact {
+
+
+    padding:140px 0;
+
+
+    background:#080808;
+
+
+}
+
+
+
+.contact-grid {
+
+
+    display:grid;
+
+
+    grid-template-columns:1fr 1fr;
+
+
+    gap:80px;
+
+
+}
+
+
+
+.contact-box {
+
+
+    padding:30px 0;
+
+
+    border-bottom:1px solid rgba(255,255,255,.1);
+
+
+}
+
+
+
+.contact-box h3 {
+
+
+    color:var(--gold);
+
+
+    margin-bottom:15px;
+
+
+    font-family:'Cinzel',serif;
+
+
+}
+
+
+
+.contact-box p {
+
+
+    color:#aaa;
+
+
+    line-height:1.8;
+
+
+}
+
+
+
+
+.contact-action {
+
+
+    padding:50px;
+
+
+    background:#111;
+
+
+    border:1px solid rgba(201,162,77,.3);
+
+
+}
+
+
+
+.contact-action h3 {
+
+
+    font-family:'Cinzel',serif;
+
+
+    font-size:40px;
+
+
+}
+
+
+
+.contact-action p {
+
+
+    color:#aaa;
+
+
+    margin:25px 0;
+
+
+}
+
+
+
+
+.whatsapp-big {
+
+
+    display:inline-block;
+
+
+    background:#25D366;
+
+
+    color:white;
+
+
+    padding:18px 40px;
+
+
+    border-radius:50px;
+
+
+    font-weight:600;
+
+
+    transition:.3s;
+
+
+}
+
+
+
+.whatsapp-big:hover {
+
+
+    transform:translateY(-5px);
+
+
+}
+
+
+
+
+
+
+
+/* MAPA */
+
+
+.map-placeholder {
+
+
+    height:350px;
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    justify-content:center;
+
+
+    text-align:center;
+
+
+    background:#111;
+
+
+}
+
+
+
+.map-placeholder span {
+
+
+    font-size:35px;
+
+
+}
+
+
+
+.map-placeholder h3 {
+
+
+    font-family:'Cinzel',serif;
+
+
+    font-size:30px;
+
+
+    margin:15px;
+
+
+}
+
+
+
+.map-placeholder p {
+
+
+    color:#aaa;
+
+
+}
+
+
+
+
+
+
+
+/* FOOTER */
+
+
+.footer {
+
+
+    padding:70px 20px;
+
+
+    background:#050505;
+
+
+    text-align:center;
+
+
+}
+
+
+
+.footer-logo {
+
+
+    font-family:'Cinzel',serif;
+
+
+    font-size:35px;
+
+
+    letter-spacing:5px;
+
+
+}
+
+
+
+.footer-logo span {
+
+
+    color:var(--gold);
+
+
+}
+
+
+
+.footer p {
+
+
+    color:#777;
+
+
+    margin:25px 0;
+
+
+}
+
+
+
+.footer-social a {
+
+
+    color:var(--gold);
+
+
+}
+
+
+
+.copyright {
+
+
+    margin-top:40px;
+
+
+    color:#555;
+
+
+    font-size:13px;
+
+
+}
+
+
+
+
+
+
+
+/* RESPONSIVIDADE */
+
+
+@media(max-width:900px){
+
+
+
+.nav-links,
+
+
+.btn-whatsapp {
+
+
+    display:none;
+
+
+}
+
+
+
+.menu-mobile {
+
+
+    display:flex;
+
+
+}
+
+
+
+
+.about-grid,
+
+
+.contact-grid {
+
+
+    grid-template-columns:1fr;
+
+
+}
+
+
+
+.gallery-grid {
+
+
+    grid-template-columns:1fr;
+
+
+    grid-template-rows:auto;
+
+
+}
+
+
+
+.gallery-item,
+
+
+.gallery-item.large {
+
+
+    height:350px;
+
+
+    grid-row:auto;
+
+
+}
+
+
+
+.services-grid {
+
+
+    grid-template-columns:1fr;
+
+
+}
+
+
+
+.service-card.featured {
+
+
+    transform:none;
+
+
+}
+
+
+
+.hero h1 {
+
+
+    letter-spacing:5px;
+
+
+}
+
+
+
+.contact-action h3 {
+
+
+    font-size:30px;
+
+
+}
+
+
+
+}
+
+
+
+@media(max-width:500px){
+
+
+
+.hero-description {
+
+
+    font-size:15px;
+
+
+}
+
+
+
+.section-title h2 {
+
+
+    font-size:35px;
+
+
+}
+
+
+
+.about-image img {
+
+
+    height:400px;
+
+
+}
+
+
+}
