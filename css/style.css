@@ -1893,6 +1893,266 @@ ul {
 
     }
 
+/* =====================================
+   PREMIUM FINISHING EFFECTS
+===================================== */
 
+
+/* ANIMAÇÃO DE ENTRADA */
+
+.hidden{
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+    transition:1s ease;
+
+}
+
+
+
+.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+
+
+
+
+
+/* BRILHO DOURADO NOS TÍTULOS */
+
+.section-title h2{
+
+    position:relative;
+
+}
+
+
+
+.section-title h2::after{
+
+
+    content:"";
+
+
+    display:block;
+
+
+    width:60px;
+
+
+    height:2px;
+
+
+    background:var(--gold);
+
+
+    margin:25px auto 0;
+
+
+
+}
+
+
+
+
+
+
+
+/* CARDS MAIS PREMIUM */
+
+
+.service-card{
+
+
+    backdrop-filter:blur(10px);
+
+
+}
+
+
+
+.service-card:hover{
+
+
+    box-shadow:
+
+    0 20px 50px rgba(201,162,77,.15);
+
+
+}
+
+
+
+
+
+
+
+/* BOTÃO WHATSAPP COM PULSO */
+
+
+.whatsapp-big,
+.btn-whatsapp{
+
+
+    animation:pulseWhats 3s infinite;
+
+
+}
+
+
+
+@keyframes pulseWhats{
+
+
+    0%{
+
+        box-shadow:0 0 0 0 rgba(37,211,102,.5);
+
+    }
+
+
+    70%{
+
+        box-shadow:0 0 0 15px rgba(37,211,102,0);
+
+    }
+
+
+    100%{
+
+        box-shadow:0 0 0 0 rgba(37,211,102,0);
+
+    }
+
+
+}
+
+
+
+
+
+
+
+
+/* GALERIA MAIS CINEMATOGRÁFICA */
+
+
+.gallery-item{
+
+
+    border-radius:4px;
+
+
+}
+
+
+
+.gallery-item::after{
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    inset:0;
+
+
+    background:
+
+    linear-gradient(
+
+    180deg,
+
+    transparent,
+
+    rgba(0,0,0,.6)
+
+    );
+
+
+    opacity:0;
+
+
+    transition:.5s;
+
+
+}
+
+
+
+.gallery-item:hover::after{
+
+
+    opacity:1;
+
+
+}
+
+
+
+
+
+
+
+/* CURSOR PREMIUM DESKTOP */
+
+
+.custom-cursor{
+
+
+    position:fixed;
+
+
+    width:20px;
+
+
+    height:20px;
+
+
+    border:1px solid var(--gold);
+
+
+    border-radius:50%;
+
+
+    pointer-events:none;
+
+
+    transform:translate(-50%,-50%);
+
+
+    z-index:9999;
+
+
+    transition:.15s;
+
+
+}
+
+
+
+.cursor-active{
+
+
+    transform:
+
+    translate(-50%,-50%)
+
+    scale(2);
+
+
+    background:rgba(201,162,77,.2);
+
+
+}
 
 }
