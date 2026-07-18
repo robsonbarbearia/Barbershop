@@ -3043,3 +3043,44 @@ ul {
 
 
 }
+
+@media(max-width:900px){
+
+
+    .nav-links.active{
+
+
+        display:flex;
+
+
+        position:absolute;
+
+
+        top:70px;
+
+
+        left:0;
+
+
+        width:100%;
+
+
+        flex-direction:column;
+
+
+        background:#111;
+
+
+        padding:30px 0;
+
+
+        text-align:center;
+
+
+        gap:25px;
+
+
+    }
+
+
+}
